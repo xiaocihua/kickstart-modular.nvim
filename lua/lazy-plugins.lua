@@ -61,6 +61,18 @@ require('lazy').setup({
   -- Or use telescope!
   -- In normal mode type `<space>sh` then write `lazy.nvim-plugin`
   -- you can continue same window with `<space>sr` which resumes last telescope search
+
+  -- DISABLE NETRW HERE
+  performance = {
+    rtp = {
+      disabled_plugins = {
+        'netrw',
+        'netrwPlugin', -- maybe just this one is enough
+        'netrwSettings',
+        'netrwFileHandlers',
+      },
+    },
+  },
 }, { ---@diagnostic disable-line: missing-fields
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
